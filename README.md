@@ -1,5 +1,22 @@
 # KENI CutWizard — déploiement web
 
+**v144.19 (dernier recours : affiche la denture la plus grossière disponible, même trop fine)** :
+suite à la v144.18, l'utilisateur a testé un autre cas, différent : carré 300×300 avec une lame
+34×1,1 mm → toujours aucun résultat bimétal. Diagnostic : ici ce n'est pas un problème de matière
+(le repli v144.18 ne s'applique pas) — physiquement, AUCUNE famille bimétal ne fabrique une lame de
+34mm de large avec une denture assez grossière pour 300×300 (toutes commencent à 2,5 TPI minimum à
+cette largeur, il en faudrait ≤ 1,95). C'est une vraie impossibilité catalogue à cette largeur de
+lame précise. L'utilisateur a confirmé vouloir, dans ce cas aussi, un résultat plutôt que rien :
+affichage désormais de la denture la PLUS GROSSIÈE réellement catalguée à la largeur/épaisseur de
+lame choisie (jusqu'à 3 familles différentes, triées de la plus grossière à la plus fine), même si
+elle reste plus fine que l'idéal pour la section à couper. Ce résultat de dernier recours est
+clairement distingué par un encart d'avertissement rouge : "⚠ Denture trop fine pour cette section
+— risque d'arrachement de dent [...] une lame plus large est recommandée si possible", afin que
+l'opérateur sache qu'il s'agit d'un pis-aller et non d'une recommandation optimale. Cette règle ne
+se déclenche qu'en toute dernière extrémité, uniquement si aucun résultat normal ni aucun résultat
+de repli "matière non recommandée" (v144.18) n'a pu être trouvé ; elle s'applique au bimétal comme
+au carbure.
+
 **v144.18 (affiche un résultat de repli, avec avertissement, plutôt qu'aucune lame bimétal)** :
 l'utilisateur a signalé que, pour certaines combinaisons (ex. barre Ø50 en paquet 8×8 avec une
 lame 54×1,6 mm — largeur engagée de 400 mm, nécessitant un pas très grossier de 1,5/2 TPI), aucun
