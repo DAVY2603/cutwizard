@@ -1,5 +1,26 @@
 # KENI CutWizard — déploiement web
 
+**v144 (surface de la section coupée + volume de copeaux enlevé)** : ajout d'un nouveau résultat
+dans le calculateur scie à ruban — pour chaque calcul, l'appli affiche désormais :
+1. **Surface de la section coupée (mm²)** : l'aire de la section de la pièce au plan de coupe,
+   avec une formule dédiée selon la forme :
+   - Ronde pleine : S = π×D²/4.
+   - Carrée/rectangulaire pleine : S = côté1 × côté2.
+   - Tube rond (creux) : S = π/4 × (D²ext − D²int), D_int = D_ext − 2×épaisseur de paroi.
+   - Tube rectangulaire (creux) : S = (A×B) − (A−2t)×(B−2t), t = épaisseur de paroi uniforme.
+   - Profilé cornière (L) à ailes égales : S = t×(2A − t) (A = longueur d'aile, t = épaisseur),
+     formule standard de section d'angle à coin vif.
+   - Profilé U et H/I : S = A×B − (A−2D)×(B−C) (A = largeur, B = hauteur, C = épaisseur âme,
+     D = épaisseur aile) — la même formule nette s'applique aux deux, seule la position de l'âme
+     (en haut pour U, au centre pour H/I) diffère, sans changer l'aire totale retirée.
+2. **Volume de copeaux enlevé en un passage (mm³)** = Surface de la section × nombre total de
+   pièces engagées (nbH × nbV) × épaisseur de la lame (kerf, prise directement dans les
+   dimensions de lame du catalogue KENI — onglet "Lames disponibles"). Représente le volume de
+   matière transformé en copeaux lorsque la lame traverse entièrement le paquet de pièces en un
+   seul passage.
+   Toutes les formules ont été vérifiées analytiquement (calcul à la main vs. moteur JS réel) pour
+   chaque forme avant publication.
+
 **v143 (correction Vc inox 316/316L + bug table diamètre)** : en comparant les résultats de
 CutWizard au "Lenox Guide to Band Sawing" (le document source officiel fourni en pièce jointe au
 début du projet, table BI-METAL SPEED CHART p.20-21, référence Ø100mm matière recuite, lame
