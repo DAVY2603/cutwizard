@@ -1,5 +1,20 @@
 # KENI CutWizard — déploiement web
 
+**v144.7 (logo MK Morse sur chaque carte de résultat)** : l'utilisateur a demandé d'afficher le
+logo du fabricant (catalogue MK Morse) sur chaque résultat de lame, aligné à droite sur la même
+ligne que le nom de la famille. Recherche effectuée dans `Catalogue_KENI_-_K24.pdf` (pages 9 à 18,
+couvrant les 7 familles bimétal et les 4 familles carbure) : chaque page produit ne porte pas une
+icône distincte par famille, seulement le nom du produit en typographie stylisée (déjà affiché en
+texte dans l'app) et, de façon constante sur toutes les pages, la marque du fabricant "MORSE" en
+haut de page. Ce logo MK Morse a donc été extrait à haute résolution (600 dpi) depuis le catalogue,
+détouré (fond transparent), recadré et converti en PNG léger (~1.7 Ko) encodé en base64
+(`MORSE_LOGO_B64`), sur le modèle des icônes `SOCIAL_*_B64` déjà présentes dans `App.js`. Il est
+désormais affiché dans `CandidateCard` (toutes les variantes : résultat complet, lame non adaptée,
+case vide) aligné à droite, sur la même ligne que le nom de la famille de lame (nouveau style
+`famNameRow` + `famLogo`), pour chacune des 5 cartes de résultat (bimétal ×2, carbure, options
+supplémentaires). Le même logo est utilisé pour toutes les familles car toutes les lames du
+calculateur (bimétal et carbure) sont des produits de la marque MK Morse.
+
 **v144.6 (correction du vrai bug : liens sans effet dans l'aperçu Artifact)** : l'utilisateur a
 signalé qu'aucun lien externe (référence KENI, mentions légales, téléphone, adresse, réseaux
 sociaux) ne produisait d'effet visible dans l'aperçu Artifact de Claude.ai. Cause identifiée :
