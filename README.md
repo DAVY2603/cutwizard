@@ -1,5 +1,16 @@
 # KENI CutWizard — déploiement web
 
+**v144.11 (correction : logos Maverick, Independence II et Independence EXS corrompus)** :
+l'utilisateur a signalé que le logo Maverick ne s'affichait pas. Diagnostic : les chaînes base64
+de 3 des 7 logos ajoutés en v144.9 (Maverick, Independence II, Independence EXS) avaient été
+altérées lors de leur insertion dans `App.js` — quelques caractères manquants ou substitués au
+milieu de très longues chaînes, rendant le PNG illisible par le décodeur (la vignette s'affichait
+vide, sans erreur visible). Vérifié en décodant chaque constante `MORSE_LOGO_*_B64` du fichier
+livré et en comparant au fichier image source d'origine : 3 non-concordances trouvées. Corrigé en
+réinjectant programmatiquement les 7 chaînes depuis leurs fichiers source (recadrage/export déjà
+validés visuellement en v144.9), sans retaper aucune chaîne à la main, puis revérifié que les 7
+PNG se décodent correctement (tailles d'image conformes) avant de reconstruire et republier.
+
 **v144.10 (logo MK Morse générique conservé à droite, logo de famille à gauche)** : précision de
 l'utilisateur sur la mise en page introduite en v144.9 — le logo générique MK Morse (v144.8) doit
 rester affiché à droite de chaque carte de résultat (identité du fabricant), et c'est le **nom de
