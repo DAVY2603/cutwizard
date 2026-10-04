@@ -1,5 +1,19 @@
 # KENI CutWizard — déploiement web
 
+**v144.16 (alignement des tuiles de résultat + ordre fz / temps de coupe inversé)** : deux
+corrections demandées par l'utilisateur sur les cartes de résultat de lame. 1) Les valeurs de
+résultat (première ligne de chaque `StatTile`) n'étaient pas toutes alignées au même niveau
+vertical : la v144.15 avait centré verticalement le contenu de chaque tuile
+(`justifyContent: 'center'`), ce qui décalait la ligne de valeur vers le bas dès qu'un libellé
+s'enroulait sur 2 lignes — ce qui arrivait précisément pour "Temps de coupe"/"Cut time", resté le
+seul libellé un peu long après le passage aux symboles courts Vc/Vf/fz. Correction : le contenu
+de chaque tuile est désormais aligné en haut (`justifyContent: 'flex-start'`), si bien que la
+valeur de chaque tuile démarre toujours à la même position, quel que soit le nombre de lignes pris
+par son libellé ; les fonds des tuiles restent de même hauteur sur une même ligne grâce au
+comportement par défaut du conteneur (`alignItems: 'stretch'`). 2) L'ordre d'affichage des tuiles
+"fz" (chip load) et "Temps de coupe" a été inversé à la demande de l'utilisateur : l'ordre est
+désormais Pas retenu, Vc, Vf, fz, Temps de coupe.
+
 **v144.15 (tuiles de résultat : 3 lignes bien centrées + symboles Vc/Vf/fz)** : l'utilisateur a
 signalé que, dans les tuiles de résultat (`StatTile`), une unité un peu longue comme "mm/min"
 provoquait un retour à la ligne non centré — cause : la valeur et l'unité étaient packées dans un
