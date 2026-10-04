@@ -1,5 +1,16 @@
 # KENI CutWizard — déploiement web
 
+**v144.15 (tuiles de résultat : 3 lignes bien centrées + symboles Vc/Vf/fz)** : l'utilisateur a
+signalé que, dans les tuiles de résultat (`StatTile`), une unité un peu longue comme "mm/min"
+provoquait un retour à la ligne non centré — cause : la valeur et l'unité étaient packées dans un
+seul `<Text>` imbriqué, et le texte qui s'enroule dans un `Text` ne se recentre pas ligne par
+ligne. Corrigé en séparant `StatTile` en 3 `<Text>` indépendants, chacun explicitement centré
+(`textAlign: 'center'`) et empilés verticalement : 1) la valeur, 2) l'unité, 3) le libellé —
+qu'il s'agisse des résultats de lames ou de perçage, qui partagent ce même composant. Par la même
+occasion, les libellés texte ont été remplacés par les symboles usuels de l'usinage, plus
+compacts et conformes à l'usage métier : "Vitesse de coupe" → **Vc**, "Avance" → **Vf**, et
+"Chip load" → **fz** (en FR comme en EN).
+
 **v144.14 (correction v144.13 : c'était l'inverse)** : la v144.13 avait interverti les deux
 notions. Après clarification de l'utilisateur, c'est bien `row.pas` (le descriptif de denture du
 catalogue, ex. "4/6") qui correspond au **pas réel** de la lame telle que spécifiée par le
