@@ -1,5 +1,26 @@
 # KENI CutWizard — déploiement web
 
+**v144.18 (affiche un résultat de repli, avec avertissement, plutôt qu'aucune lame bimétal)** :
+l'utilisateur a signalé que, pour certaines combinaisons (ex. barre Ø50 en paquet 8×8 avec une
+lame 54×1,6 mm — largeur engagée de 400 mm, nécessitant un pas très grossier de 1,5/2 TPI), aucun
+résultat bimétal n'était affiché. Diagnostic : à cette dimension de lame, une seule famille du
+catalogue (Independence EXS) propose une denture assez grossière pour ce besoin ; si cette famille
+est explicitement marquée "Déconseillée" pour la nuance de matière choisie (ou si le groupe ISO de
+la matière n'est pas répertorié), l'ancienne logique de notation (`scoreFamilies`) écartait
+totalement la famille (score forcé à -1 000 000), laissant les 3 emplacements de résultat vides —
+alors que physiquement, c'est la seule denture du catalogue capable de couvrir cette dimension de
+pièce avec cette largeur de lame. L'utilisateur a confirmé que le calcul d'origine était correct,
+mais a demandé qu'un résultat reste affiché dans ce cas, avec la denture qui répond au besoin.
+Comportement corrigé : seule l'indisponibilité réelle de la denture pour la dimension de lame
+choisie (aucune référence catalogue avec un TPI assez bas, quelle que soit la matière) fait
+disparaître un résultat — une matière non répertoriée ou une famille "Déconseillée" n'est plus
+bloquante si c'est la seule option disponible : elle est alors affichée en dernier recours (classée
+sous toute famille correctement recommandée pour la même dimension), avec un encart
+d'avertissement rouge "⚠ Non recommandée pour cette matière — seule denture disponible pour cette
+dimension de lame" et un code couleur distinct (accent rouge foncé) sur la carte de résultat. Cette
+même correction s'applique aussi bien au bimétal qu'au carbure, les deux utilisant la même fonction
+de notation.
+
 **v144.17 (affiche la dureté saisie quand la pièce est "Trempé / revenu")** : l'utilisateur a
 signalé que, lorsqu'il coche l'état de la pièce "Trempé / revenu" et saisit une dureté mesurée
 (ex. 380 HB), cette valeur n'apparaît nulle part dans le panneau "Informations matière & risque" —
