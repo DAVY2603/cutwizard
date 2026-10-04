@@ -1,5 +1,12 @@
 # KENI CutWizard — déploiement web
 
+**v144.12 (Matrix II sans son suffixe "(M2)")** : pour la famille Matrix II, qui n'a pas de logo
+dédié et affiche donc son nom en texte à gauche de la carte de résultat, l'utilisateur a demandé
+de n'afficher que "Matrix II" sans le suffixe technique "(M2)" porté par le libellé interne
+("Matrix II (M2)", utilisé par ailleurs pour le scoring/matching des familles et donc inchangé).
+Ajout d'une fonction `familyDisplayName(family)` qui ne touche que l'affichage : elle retire ce
+suffixe pour Matrix II et laisse les autres libellés sans logo inchangés.
+
 **v144.11 (correction : logos Maverick, Independence II et Independence EXS corrompus)** :
 l'utilisateur a signalé que le logo Maverick ne s'affichait pas. Diagnostic : les chaînes base64
 de 3 des 7 logos ajoutés en v144.9 (Maverick, Independence II, Independence EXS) avaient été
