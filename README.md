@@ -1,5 +1,18 @@
 # KENI CutWizard — déploiement web
 
+**v144.9 (un logo distinct par famille de lame)** : jusqu'ici un seul logo générique MK Morse
+était affiché sur chaque carte de résultat. L'utilisateur a fourni 7 visuels officiels (fond
+transparent) correspondant chacun à une famille précise : M42, Maverick, The Morse Achiever,
+M-Factor GES, Independence II, Independence EXS et Challenger. Chaque visuel a été détouré
+finement (rognage au contenu réel), mis à l'échelle et optimisé en PNG/base64, puis une table de
+correspondance `FAMILY_LOGOS` a été ajoutée dans `App.js`, indexée sur les libellés exacts de
+`BIM_FAMILIES`/`CARB_FAMILIES`. Une fonction `familyLogoBox(family, maxW, maxH)` calcule désormais
+la taille d'affichage de chaque logo en conservant son ratio d'origine (les visuels fournis ayant
+des proportions très différentes — quasi carré pour M42, bandeau large et fin pour les autres) à
+l'intérieur d'une boîte de 72×28px. `CandidateCard` affiche ainsi le logo propre à la famille
+recommandée ; les 4 familles sans visuel dédié (Matrix II, M-Factor GP/FB+/HSN) retombent sur le
+logo générique MORSE (v144.8).
+
 **v144.8 (remplacement du logo MK Morse par le visuel fourni par l'utilisateur)** : l'utilisateur
 a fourni directement son propre fichier logo MK Morse (fond déjà transparent, version noire avec
 le triangle rouge). Le logo extrait automatiquement du catalogue en v144.7 a été remplacé par ce
