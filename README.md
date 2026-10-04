@@ -1,5 +1,22 @@
 # KENI CutWizard — déploiement web
 
+**v144.2 (déplacement + refonte visuelle du bloc surface/volume)** : la surface de la section
+coupée et le volume de copeaux enlevé (ajoutés en v144) sont désormais affichés dans le bloc
+"Informations matière & risque" plutôt que dans le bloc "Dimensions de la pièce", puisqu'il s'agit
+d'un résultat de calcul au même titre que les recommandations de lame, pas d'une donnée de saisie.
+Profité de ce déplacement pour améliorer la présentation de l'ensemble du bloc matière :
+- Les propriétés neutres (dureté, usinabilité, traitement thermique) sont maintenant dans une
+  grille de petites fiches, plus lisible qu'une liste de lignes "label : valeur".
+- Les deux points de vigilance opérationnelle (risque d'écrouissage, lubrification) sont mis en
+  valeur à part, dans des encadrés dédiés (fond teinté), pour bien les distinguer des propriétés
+  neutres ci-dessus.
+- La surface et le volume sont affichés en bas du bloc, sous un séparateur, avec le même style de
+  "tuile" (StatTile) que les résultats de lame — plus un rappel explicite : ces deux valeurs
+  dépendent de la lame choisie (épaisseur) et des dimensions de la pièce, et se recalculent donc
+  automatiquement à chaque changement de l'un ou l'autre (déjà le cas techniquement depuis la v144
+  — un seul calcul réactif commun à tous les résultats affichés — mais rendu explicite à l'écran
+  à la demande de l'utilisateur).
+
 **v144 (surface de la section coupée + volume de copeaux enlevé)** : ajout d'un nouveau résultat
 dans le calculateur scie à ruban — pour chaque calcul, l'appli affiche désormais (unités en cm²/cm³
 pour rester lisibles, calcul interne en mm puis conversion finale) :
