@@ -1,8 +1,9 @@
 # KENI CutWizard — déploiement web
 
 **v144 (surface de la section coupée + volume de copeaux enlevé)** : ajout d'un nouveau résultat
-dans le calculateur scie à ruban — pour chaque calcul, l'appli affiche désormais :
-1. **Surface de la section coupée (mm²)** : l'aire de la section de la pièce au plan de coupe,
+dans le calculateur scie à ruban — pour chaque calcul, l'appli affiche désormais (unités en cm²/cm³
+pour rester lisibles, calcul interne en mm puis conversion finale) :
+1. **Surface de la section coupée (cm²)** : l'aire de la section de la pièce au plan de coupe,
    avec une formule dédiée selon la forme :
    - Ronde pleine : S = π×D²/4.
    - Carrée/rectangulaire pleine : S = côté1 × côté2.
@@ -13,7 +14,7 @@ dans le calculateur scie à ruban — pour chaque calcul, l'appli affiche désor
    - Profilé U et H/I : S = A×B − (A−2D)×(B−C) (A = largeur, B = hauteur, C = épaisseur âme,
      D = épaisseur aile) — la même formule nette s'applique aux deux, seule la position de l'âme
      (en haut pour U, au centre pour H/I) diffère, sans changer l'aire totale retirée.
-2. **Volume de copeaux enlevé en un passage (mm³)** = Surface de la section × nombre total de
+2. **Volume de copeaux enlevé en un passage (cm³)** = Surface de la section × nombre total de
    pièces engagées (nbH × nbV) × épaisseur de la lame (kerf, prise directement dans les
    dimensions de lame du catalogue KENI — onglet "Lames disponibles"). Représente le volume de
    matière transformé en copeaux lorsque la lame traverse entièrement le paquet de pièces en un
