@@ -1,5 +1,30 @@
 # KENI CutWizard — déploiement web
 
+**v143 (correction Vc inox 316/316L + bug table diamètre)** : en comparant les résultats de
+CutWizard au "Lenox Guide to Band Sawing" (le document source officiel fourni en pièce jointe au
+début du projet, table BI-METAL SPEED CHART p.20-21, référence Ø100mm matière recuite, lame
+bimétal, arrosage), deux problèmes ont été identifiés :
+1. **vcBim du 316/316L était trop haut** : Lenox indique 25 m/min pour le 316 à 100mm (contre 37
+   dans la base KENI, puis 35 après un 1er ajustement) — ramené à **27 m/min** (base, avant
+   correction diamètre), qui donne ~30 m/min à Ø50mm, cohérent avec la fourchette KENI (25-35
+   m/min) et avec la source Lenox.
+2. **Bug dans la table de correction par diamètre (`facteurTailleBim`)** : les paliers Lenox
+   officiels (6mm:+15%, 19mm:+12%, 32mm:+10%, 64mm:+5%, 100mm:référence, 200mm:-12%) étaient
+   mal indexés — le palier "64mm:+5%" était enregistré avec un facteur de +0% au lieu de +5%, et
+   le palier "100mm:référence" avait un facteur de -3% au lieu de 0%. Ce bug sous-estimait
+   systématiquement la vitesse de coupe de ~3 à 7% pour toute pièce entre 50 et 150mm de diamètre.
+   Corrigé en réalignant la table exactement sur les seuils et facteurs publiés par Lenox. Seul le
+   calcul bimétal est concerné (le carbure n'applique pas de correction diamètre dans le modèle
+   KENI). Le reste du catalogue acier (1018, A36, 1045, 4140, 4340, 12L14, 304, A2, D2) a été
+   vérifié contre le même document Lenox et est fidèle à ±10% — aucune autre correction nécessaire.
+
+**v142 (correction Vc inox 316/316L, 1er ajustement)** : valeurs précédentes (37/62 m/min,
+identiques pour 304/316/316L) dépassaient les fourchettes fournisseur communiquées par KENI pour
+le 316 et le 316L ; ajustées une 1ère fois à 35/50 m/min (voir v143 ci-dessus pour l'ajustement
+final du bimétal après analyse de la source Lenox).
+
+**v141** : renommage "Trepanning cutter" → "Hole Cutter" (page anglaise).
+
 **v140.1 (correctif)** : la v140 utilisait des chemins **absolus** (`/appweb/...`,
 `/favicon.ico`, etc.) pour que `en/index.html` puisse charger les fichiers partagés à la racine
 sans les dupliquer. Cela cassait l'aperçu Artifact de Claude.ai (page blanche), car ce service ne
