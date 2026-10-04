@@ -1,5 +1,13 @@
 # KENI CutWizard — déploiement web
 
+**v144.13 (n'afficher que le pas réel, plus le descriptif catalogue "moyen")** : la tuile "Pas
+retenu" de chaque carte de résultat affichait jusqu'ici deux informations combinées : le
+descriptif de denture du catalogue (`row.pas`, ex. "4/6", une plage de denture variable — valeur
+"moyenne"/nominale du catalogue) en valeur principale, et le TPI réellement utilisé dans les
+calculs (`row.tpi`, ex. "5 TPI", une valeur unique) en sous-texte. L'utilisateur a demandé de ne
+garder que le second (le pas réel retenu pour le calcul), en retirant le descriptif catalogue.
+La tuile affiche donc désormais uniquement `{tpi} TPI`.
+
 **v144.12 (Matrix II sans son suffixe "(M2)")** : pour la famille Matrix II, qui n'a pas de logo
 dédié et affiche donc son nom en texte à gauche de la carte de résultat, l'utilisateur a demandé
 de n'afficher que "Matrix II" sans le suffixe technique "(M2)" porté par le libellé interne
