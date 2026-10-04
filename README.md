@@ -1,5 +1,12 @@
 # KENI CutWizard — déploiement web
 
+**v144.8 (remplacement du logo MK Morse par le visuel fourni par l'utilisateur)** : l'utilisateur
+a fourni directement son propre fichier logo MK Morse (fond déjà transparent, version noire avec
+le triangle rouge). Le logo extrait automatiquement du catalogue en v144.7 a été remplacé par ce
+visuel : détouré finement (rognage au contenu réel), réduit et optimisé en PNG (~1,3 Ko) encodé en
+base64, en conservant la même intégration (constante `MORSE_LOGO_B64`, affichage dans
+`CandidateCard` aligné à droite sur la ligne du nom de la famille).
+
 **v144.7 (logo MK Morse sur chaque carte de résultat)** : l'utilisateur a demandé d'afficher le
 logo du fabricant (catalogue MK Morse) sur chaque résultat de lame, aligné à droite sur la même
 ligne que le nom de la famille. Recherche effectuée dans `Catalogue_KENI_-_K24.pdf` (pages 9 à 18,
