@@ -1,5 +1,14 @@
 # KENI CutWizard — déploiement web
 
+**v144.10 (logo MK Morse générique conservé à droite, logo de famille à gauche)** : précision de
+l'utilisateur sur la mise en page introduite en v144.9 — le logo générique MK Morse (v144.8) doit
+rester affiché à droite de chaque carte de résultat (identité du fabricant), et c'est le **nom de
+la famille, à gauche**, qui doit être remplacé par le logo spécifique de cette famille quand il en
+existe un. Si aucun visuel dédié n'est disponible pour la famille (Matrix II, M-Factor GP/FB+/HSN),
+le nom reste affiché en texte à cet endroit. Implémenté via une nouvelle fonction
+`familyLogoBoxOrNull()` (renvoie `null` si la famille n'a pas de logo dédié, au lieu de retomber
+sur le logo générique) et `genericMorseLogoBox()` pour le logo de droite, toujours affiché.
+
 **v144.9 (un logo distinct par famille de lame)** : jusqu'ici un seul logo générique MK Morse
 était affiché sur chaque carte de résultat. L'utilisateur a fourni 7 visuels officiels (fond
 transparent) correspondant chacun à une famille précise : M42, Maverick, The Morse Achiever,
