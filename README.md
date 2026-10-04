@@ -1,5 +1,13 @@
 # KENI CutWizard — déploiement web
 
+**v144.3 (lubrification déplacée dans chaque carte de résultat)** : la consigne de lubrification,
+qui était affichée une seule fois dans le bloc "Informations matière & risque", est maintenant
+répétée dans chaque carte de résultat (une par lame recommandée, bimétal et carbure) — c'est au
+moment de choisir et monter la lame qu'on veut l'avoir sous les yeux, pas seulement en lisant les
+propriétés générales de la matière. Le bloc matière ne garde que le risque d'écrouissage comme
+point de vigilance mis en valeur (propriété intrinsèque à la matière, indépendante de la lame
+choisie).
+
 **v144.2 (déplacement + refonte visuelle du bloc surface/volume)** : la surface de la section
 coupée et le volume de copeaux enlevé (ajoutés en v144) sont désormais affichés dans le bloc
 "Informations matière & risque" plutôt que dans le bloc "Dimensions de la pièce", puisqu'il s'agit
