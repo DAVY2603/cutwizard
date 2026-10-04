@@ -1,5 +1,13 @@
 # KENI CutWizard — déploiement web
 
+**v144.14 (correction v144.13 : c'était l'inverse)** : la v144.13 avait interverti les deux
+notions. Après clarification de l'utilisateur, c'est bien `row.pas` (le descriptif de denture du
+catalogue, ex. "4/6") qui correspond au **pas réel** de la lame telle que spécifiée par le
+fabricant, tandis que `row.tpi` (le nombre unique utilisé dans les formules de calcul, ex. "5")
+n'est qu'une valeur représentative **moyenne retenue pour le calcul**, pas une caractéristique
+réelle de la lame. La tuile "Pas retenu" affiche donc désormais `row.pas` (ex. "4/6 TPI"), et
+non plus `row.tpi`.
+
 **v144.13 (n'afficher que le pas réel, plus le descriptif catalogue "moyen")** : la tuile "Pas
 retenu" de chaque carte de résultat affichait jusqu'ici deux informations combinées : le
 descriptif de denture du catalogue (`row.pas`, ex. "4/6", une plage de denture variable — valeur
