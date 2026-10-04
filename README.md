@@ -1,5 +1,18 @@
 # KENI CutWizard — déploiement web
 
+**v144.4 (correction du lien "Référence KENI" cassé)** : le bouton de chaque carte de résultat
+pointait vers `https://keni-sa.com/recherche?q=...`, une URL qui n'existe pas sur le site réel —
+confirmé en consultant keni-sa.com : c'est un site Next.js dont la recherche (raccourci clavier
+⌘K / Ctrl+K) fonctionne uniquement côté client, sans URL de résultats dédiée à laquelle on
+pourrait faire pointer un lien, d'où le lien cassé (en français comme en anglais, signalé par
+l'utilisateur). Corrigé en pointant vers la page d'accueil du site (`https://keni-sa.com`, vérifiée
+fonctionnelle) et, sur le web, en copiant automatiquement la référence dans le presse-papiers au
+clic (`navigator.clipboard`, sans dépendance supplémentaire) pour que l'utilisateur n'ait plus qu'à
+la coller dans la recherche du site une fois dessus. Sur mobile (Snack), la copie est silencieusement
+ignorée si l'API n'existe pas — la référence reste de toute façon affichée à l'écran. Texte du
+bouton mis à jour en conséquence ("Cliquez pour rechercher cette référence sur keni-sa.com" /
+"Click to search this reference on keni-sa.com").
+
 **v144.3 (lubrification déplacée dans chaque carte de résultat)** : la consigne de lubrification,
 qui était affichée une seule fois dans le bloc "Informations matière & risque", est maintenant
 répétée dans chaque carte de résultat (une par lame recommandée, bimétal et carbure) — c'est au
