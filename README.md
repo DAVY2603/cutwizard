@@ -1,19 +1,24 @@
 # KENI CutWizard — déploiement web
 
+**v140.1 (correctif)** : la v140 utilisait des chemins **absolus** (`/appweb/...`,
+`/favicon.ico`, etc.) pour que `en/index.html` puisse charger les fichiers partagés à la racine
+sans les dupliquer. Cela cassait l'aperçu Artifact de Claude.ai (page blanche), car ce service ne
+sert pas la page à la racine réelle d'un domaine — un chemin absolu y pointait vers
+`claude.ai/appweb/...` au lieu de l'espace propre à l'artefact, empêchant le bundle JS de charger.
+Corrigé en repassant `index.html` (racine) en chemins **relatifs simples** (`appweb/...`,
+`favicon.ico`, ...) et `en/index.html` en chemins relatifs **`../`** (`../appweb/...`,
+`../favicon.ico`, ...) vers ces mêmes fichiers partagés à la racine. Ce schéma fonctionne à la
+fois dans l'aperçu Artifact et sur l'hébergement OVH à la racine de `cutwizard.com`. Sur GitHub
+Pages en sous-chemin de projet (`username.github.io/repo/`), ce schéma fonctionne aussi tel quel
+(chemins relatifs, pas de dépendance à la racine du domaine).
+
 **v140 (SEO bilingue)** : ajout d'une vraie page anglaise indexable à `/en/` (dossier `en/`
 contenant son propre `index.html`), avec son propre title/description/keywords/Open Graph en
 anglais, reliée à la page française par des balises `hreflang` réciproques (fr / en / x-default)
 dans les deux `index.html` ET dans `sitemap.xml`. Les deux pages chargent le **même** bundle JS
-partagé (`/appweb/...`, en chemin absolu désormais — voir ci-dessous) : seul un petit script
-inline dans `en/index.html` (`window.__CUTWIZARD_LANG__ = 'en'`) indique à l'appli de démarrer en
-anglais sur cette page, pour que le contenu affiché corresponde dès le chargement à son
-title/description anglais. **Important** : tous les chemins vers les fichiers partagés
-(`favicon.ico`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `manifest.json`,
-`appweb/...`) sont désormais en chemin **absolu** (`/favicon.ico`, etc.) dans les deux
-`index.html`, pour que `en/index.html` puisse les charger depuis son sous-dossier sans les
-dupliquer. Sur GitHub Pages en sous-chemin de projet (`username.github.io/repo/`), ces chemins
-absolus casseraient — adapter en chemins relatifs si ce mode de déploiement est utilisé (non
-nécessaire pour l'hébergement OVH à la racine de `cutwizard.com`, qui reste l'usage prévu).
+partagé : seul un petit script inline dans `en/index.html`
+(`window.__CUTWIZARD_LANG__ = 'en'`) indique à l'appli de démarrer en anglais sur cette page, pour
+que le contenu affiché corresponde dès le chargement à son title/description anglais.
 
 **v139 (SEO)** : mots-clés étendus dans `index.html` — ajout de scies cloches, fraises à carotter,
 bimétal, HSS, cobalt, carbure, M42, M51, DIN 338, DIN 345, outils coupants.

@@ -18,14 +18,16 @@
     <link rel="alternate" hreflang="en" href="https://cutwizard.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://cutwizard.com/" />
 
-    <!-- Chemins absolus (et non relatifs) : ce même fichier gabarit sert aussi de base à
-         /en/index.html, qui doit pouvoir charger les mêmes icônes/bundle JS partagés à la racine
-         du site sans les dupliquer dans le sous-dossier /en/. -->
+    <!-- Chemins relatifs (sans slash initial) : fonctionne à la fois sur l'hébergement OVH à la
+         racine du domaine ET dans l'aperçu Claude.ai Artifact, qui ne sert pas la page à la
+         racine réelle du domaine (un chemin absolu y pointerait vers claude.ai/... et casserait
+         le chargement du bundle JS, laissant la page blanche). La page anglaise /en/index.html
+         utilise ses propres chemins relatifs en "../" vers ces mêmes fichiers partagés. -->
     <!-- Icônes app (ajout à l'écran d'accueil iOS/Android + PWA) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+    <link rel="manifest" href="manifest.json" />
 
     <!-- Open Graph / partage réseaux sociaux -->
     <meta property="og:type" content="website" />
@@ -130,7 +132,7 @@
         }
       }
     </style>
-  <link rel="icon" href="/favicon.ico"/></head>
+  <link rel="icon" href="favicon.ico"/></head>
 
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
@@ -139,6 +141,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/appweb/static/js/web/index-b96196f2bb4342a7104702da5a7e6978.js" defer></script>
+  <script src="appweb/static/js/web/index-b96196f2bb4342a7104702da5a7e6978.js" defer></script>
 </body>
 </html>
