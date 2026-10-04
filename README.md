@@ -1,5 +1,15 @@
 # KENI CutWizard — déploiement web
 
+**v144.17 (affiche la dureté saisie quand la pièce est "Trempé / revenu")** : l'utilisateur a
+signalé que, lorsqu'il coche l'état de la pièce "Trempé / revenu" et saisit une dureté mesurée
+(ex. 380 HB), cette valeur n'apparaît nulle part dans le panneau "Informations matière & risque" —
+seule la dureté catalogue par défaut ("Dureté livraison (HB)") y était affichée. Vérification faite
+côté calcul : la dureté saisie était bien prise en compte (elle pilote `facteurDurete()`, qui
+ajuste la vitesse de coupe `vc` pour les lames bimétal et carbure), seul l'affichage manquait.
+Ajout d'une ligne "Dureté retenue pour le calcul" dans le panneau Informations, visible uniquement
+quand "Trempé / revenu" est coché et qu'une dureté a été saisie : elle affiche la valeur HB saisie
+ainsi que son équivalent HRC (`≈ X HRC`) effectivement utilisé dans le calcul de vitesse de coupe.
+
 **v144.16 (alignement des tuiles de résultat + ordre fz / temps de coupe inversé)** : deux
 corrections demandées par l'utilisateur sur les cartes de résultat de lame. 1) Les valeurs de
 résultat (première ligne de chaque `StatTile`) n'étaient pas toutes alignées au même niveau
