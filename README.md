@@ -1,5 +1,19 @@
 # KENI CutWizard — déploiement web
 
+**v144.6 (correction du vrai bug : liens sans effet dans l'aperçu Artifact)** : l'utilisateur a
+signalé qu'aucun lien externe (référence KENI, mentions légales, téléphone, adresse, réseaux
+sociaux) ne produisait d'effet visible dans l'aperçu Artifact de Claude.ai. Cause identifiée :
+tous ces liens utilisaient `window.open(url, '_blank')`, un appel scripté que l'iframe en bac à
+sable de l'aperçu Artifact (et le bloqueur de popups de nombreux navigateurs) bloque souvent
+silencieusement — sans erreur visible, juste aucune action. Corrigé en s'appuyant sur le mécanisme
+natif de react-native-web : chaque `TouchableOpacity` concerné reçoit maintenant aussi les props
+`href`/`hrefAttrs`, que react-native-web transforme en un vrai élément HTML `<a href target="_blank">`
+sur le web — une navigation d'ancre authentique gérée nativement par le navigateur, qui fonctionne
+de façon fiable y compris dans l'iframe en bac à sable (contrairement à un `window.open()`
+scripté). Le comportement sur mobile (Snack/natif), qui utilisait déjà `Linking.openURL`, est
+inchangé. Les liens concernés : référence KENI de chaque carte de résultat, logo d'en-tête,
+mentions légales/CGV/confidentialité, téléphone, adresse, et les 4 réseaux sociaux du bandeau bas.
+
 **v144.5 (annule la v144.4 — lien de recherche confirmé par KENI)** : la v144.4 avait remplacé le
 lien vers `https://keni-sa.com/recherche?q=...` par un lien vers la page d'accueil, en pensant
 cette URL de recherche inexistante (le site keni-sa.com est une appli Next.js dont la recherche
