@@ -1,6 +1,15 @@
 # KENI CutWizard — déploiement web
 
-**v144.4 (correction du lien "Référence KENI" cassé)** : le bouton de chaque carte de résultat
+**v144.5 (annule la v144.4 — lien de recherche confirmé par KENI)** : la v144.4 avait remplacé le
+lien vers `https://keni-sa.com/recherche?q=...` par un lien vers la page d'accueil, en pensant
+cette URL de recherche inexistante (le site keni-sa.com est une appli Next.js dont la recherche
+semblait, de l'extérieur, fonctionner uniquement côté client via ⌘K/Ctrl+K). KENI a confirmé que
+`https://keni-sa.com/recherche?q=` suivi de la référence encodée est bien le bon format d'URL de
+recherche du site. Revenu à ce lien d'origine : `https://keni-sa.com/recherche?q=` concaténé avec
+la référence complète (référence catalogue + longueur de lame), et au texte de bouton d'origine
+("Cliquez ici pour commander cette référence" / "Click here to order this reference").
+
+**v144.4 (tentative de correction, annulée en v144.5)** : le bouton de chaque carte de résultat
 pointait vers `https://keni-sa.com/recherche?q=...`, une URL qui n'existe pas sur le site réel —
 confirmé en consultant keni-sa.com : c'est un site Next.js dont la recherche (raccourci clavier
 ⌘K / Ctrl+K) fonctionne uniquement côté client, sans URL de résultats dédiée à laquelle on
