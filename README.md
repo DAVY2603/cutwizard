@@ -1,5 +1,15 @@
 # KENI CutWizard — déploiement web
 
+**v144.21 (M-Factor HSN recommandée pour les non-ferreux N1.1-N1.4 / N3.1-N3.4)** : l'utilisateur
+a signalé que la lame carbure M-Factor HSN, bien disponible au catalogue, était marquée
+"Déconseillée" dans le tableau de compatibilité matière pour les groupes ISO N1.1, N1.2, N1.3,
+N1.4 (aluminium) et N3.1, N3.2, N3.3, N3.4 (cuivre/laiton/bronze), alors qu'elle doit y être
+recommandée. Les 8 entrées correspondantes de `isoCarb` ont été mises à jour en "Recommandée" pour
+la famille "M-Factor HSN (Carbure)" (modification de données ciblée, vérifiée programmatiquement
+pour confirmer qu'aucune autre entrée du jeu de données n'a été touchée). Ces groupes ISO
+proposaient déjà "M-Factor FB+ (Carbure)" en Recommandée ; HSN s'ajoute désormais comme seconde
+option recommandée pour ces matières non ferreuses.
+
 **v144.20 (logos M-Factor GP et M-Factor FB+ & FBS)** : ajout de 2 nouveaux logos de famille,
 extraits des visuels fournis par l'utilisateur (fond blanc rendu transparent, rognés au contenu) :
 "M-Factor GP (Carbure)" et "M-Factor FB+ (Carbure)". Pour ce dernier, l'utilisateur a demandé un
