@@ -1,5 +1,15 @@
 # KENI CutWizard — déploiement web
 
+**v144.20 (logos M-Factor GP et M-Factor FB+ & FBS)** : ajout de 2 nouveaux logos de famille,
+extraits des visuels fournis par l'utilisateur (fond blanc rendu transparent, rognés au contenu) :
+"M-Factor GP (Carbure)" et "M-Factor FB+ (Carbure)". Pour ce dernier, l'utilisateur a demandé un
+logo distinct pour "FBS" également, mais il n'existe pas de famille "M-Factor FBS (Carbure)" dans
+les données du catalogue : FB+ et FBS sont deux variantes du même modèle au sein de l'unique
+famille "M-Factor FB+ (Carbure)" (références catalogue se terminant par C ou S). Le logo fourni,
+qui représente d'ailleurs "FB+ & FBS" réunis, a donc été appliqué à cette famille unique, couvrant
+de fait les deux variantes. Avec cet ajout, seule la famille "M-Factor HSN (Carbure)" reste sans
+logo dédié (visuel fourni mais non demandé dans cette tâche) et affiche encore son nom en texte.
+
 **v144.19 (dernier recours : affiche la denture la plus grossière disponible, même trop fine)** :
 suite à la v144.18, l'utilisateur a testé un autre cas, différent : carré 300×300 avec une lame
 34×1,1 mm → toujours aucun résultat bimétal. Diagnostic : ici ce n'est pas un problème de matière
