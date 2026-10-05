@@ -1,5 +1,18 @@
 # KENI CutWizard — déploiement web
 
+**v144.23 (schémas de pièce officiels)** : remplacement de tous les schémas de la fenêtre "Schéma
+de la pièce" (ancien dessin procédural, construit à base de Views et de lignes de cote tracées en
+code) par les 9 visuels de référence fournis par l'utilisateur (fond transparent, mêmes
+conventions de lettres A/B/C/D/L/H/Ø/Ep. déjà utilisées ailleurs dans l'app pour les profilés et
+tubes, donc sans besoin de traduction ou de légende additionnelle) : rond plein, carré, rectangle,
+cornière (L), poutrelle (H/I), profilé U, tube carré, tube rectangulaire, tube rond (anneau). Pour
+les formes "Carré/Rectangle" et "Tube rectangulaire", qui n'avaient jusqu'ici qu'un seul visuel
+générique, l'app choisit désormais automatiquement entre le schéma carré et le schéma rectangle
+selon les dimensions déjà saisies (schéma carré si la 2ᵉ dimension est vide ou égale à la 1ʳᵉ),
+pour que le visuel affiché corresponde toujours à la forme réellement décrite. Vérifié visuellement
+dans un navigateur headless pour les 9 variantes (aucune erreur console, rendu conforme aux
+visuels fournis).
+
 **v144.22 (logo M-Factor HSN)** : ajout du logo de la famille "M-Factor HSN (Carbure)" (fond
 blanc rendu transparent, rogné au contenu, même traitement que les logos précédents), qui
 remplace désormais le texte sur la carte de résultat lorsque cette famille est recommandée —
