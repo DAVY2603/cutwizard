@@ -1,5 +1,12 @@
 # KENI CutWizard — déploiement web
 
+**v144.25 (une seule image pour Carré/Rectangle et Tube carré/rectangulaire)** : l'utilisateur
+constatait que l'ancien visuel carré (1×1) s'affichait encore tant que la 2ᵉ dimension était vide.
+L'alternance automatique carré/rectangle introduite en v144.23 est supprimée : la forme
+"Carré/Rectangle" affiche toujours `carreb.png` et "Tube carré/rectangulaire" toujours
+`tube_carreb.png` (images fournies par l'utilisateur). Les anciens visuels carré et tube carré
+sont retirés du code (bundle plus léger).
+
 **v144.24 (mise à jour des schémas rectangle et tube rectangulaire)** : l'utilisateur a fourni 2
 nouveaux visuels de référence, légèrement différents des précédents, pour remplacer les schémas
 "Rectangle" et "Tube rectangulaire" introduits en v144.23 (même traitement : fond transparent,
