@@ -1,5 +1,11 @@
 # KENI CutWizard — déploiement web
 
+**v144.24 (mise à jour des schémas rectangle et tube rectangulaire)** : l'utilisateur a fourni 2
+nouveaux visuels de référence, légèrement différents des précédents, pour remplacer les schémas
+"Rectangle" et "Tube rectangulaire" introduits en v144.23 (même traitement : fond transparent,
+rogné au contenu). Mêmes conventions de lettres (1/2 pour le rectangle, L/H/Ep. pour le tube),
+aucun autre changement de logique. Vérifié visuellement dans un navigateur headless.
+
 **v144.23 (schémas de pièce officiels)** : remplacement de tous les schémas de la fenêtre "Schéma
 de la pièce" (ancien dessin procédural, construit à base de Views et de lignes de cote tracées en
 code) par les 9 visuels de référence fournis par l'utilisateur (fond transparent, mêmes
