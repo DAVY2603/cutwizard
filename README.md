@@ -1,5 +1,11 @@
 # KENI CutWizard — déploiement web
 
+**v144.22 (logo M-Factor HSN)** : ajout du logo de la famille "M-Factor HSN (Carbure)" (fond
+blanc rendu transparent, rogné au contenu, même traitement que les logos précédents), qui
+remplace désormais le texte sur la carte de résultat lorsque cette famille est recommandée —
+notamment pour les non-ferreux (N1.1-N1.4, N3.1-N3.4) depuis la v144.21. Toutes les familles
+bimétal et carbure du catalogue disposent maintenant d'un logo dédié.
+
 **v144.21 (M-Factor HSN recommandée pour les non-ferreux N1.1-N1.4 / N3.1-N3.4)** : l'utilisateur
 a signalé que la lame carbure M-Factor HSN, bien disponible au catalogue, était marquée
 "Déconseillée" dans le tableau de compatibilité matière pour les groupes ISO N1.1, N1.2, N1.3,
