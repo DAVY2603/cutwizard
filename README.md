@@ -1,5 +1,11 @@
 # KENI CutWizard — déploiement web
 
+**v144.27 (lame utilisée : dimensions et longueur obligatoires, sans valeur par défaut)** : la
+section "Lame utilisée" n'a plus de dimension de lame présélectionnée (avant : 34 x 1,1 mm). Les
+résultats ne s'affichent que si les dimensions de lame ET la longueur de lame (> 0) sont renseignées,
+en plus de la nuance, de la pièce et de toutes ses dimensions (v144.26). Messages d'aide rouges
+FR/EN sous les deux champs ; message vide mis à jour.
+
 **v144.26 (pièce et dimensions obligatoires avant tout résultat)** : section "Pièce à couper" —
 plus aucune pièce ni dimension par défaut (avant : Ronde Ø50 préremplie). Les résultats (quantités
 de coupe, lames bimétal et carbure) ne s'affichent que lorsqu'une pièce est choisie ET que toutes les
