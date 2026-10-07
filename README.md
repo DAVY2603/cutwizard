@@ -1,5 +1,15 @@
 # KENI CutWizard — déploiement web
 
+**v144.26 (pièce et dimensions obligatoires avant tout résultat)** : section "Pièce à couper" —
+plus aucune pièce ni dimension par défaut (avant : Ronde Ø50 préremplie). Les résultats (quantités
+de coupe, lames bimétal et carbure) ne s'affichent que lorsqu'une pièce est choisie ET que toutes les
+dimensions qu'elle exige sont renseignées (> 0) : Ronde = Ø ; Carré/Rectangle = côté (2ᵉ dimension
+facultative, vide = carré) ; Tube rond = Ø ext. + paroi ; Tube carré/rectangulaire = longueur +
+hauteur + paroi ; Cornière L = A + B ; Poutrelle H/I et profilé U = A + B + C + D. Champs
+obligatoires signalés en rouge dans la fenêtre de schéma, message d'aide sous "Dimensions de la
+pièce", et les dimensions sont remises à zéro quand on change de pièce / type de tube / type de
+profilé (leur signification diffère). Message vide mis à jour (FR/EN).
+
 **v144.25 (une seule image pour Carré/Rectangle et Tube carré/rectangulaire)** : l'utilisateur
 constatait que l'ancien visuel carré (1×1) s'affichait encore tant que la 2ᵉ dimension était vide.
 L'alternance automatique carré/rectangle introduite en v144.23 est supprimée : la forme
