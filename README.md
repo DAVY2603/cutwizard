@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.29 (bloc "Veuillez sélectionner votre mode !")** : sous le texte d'introduction, les boutons
+Sciage / Perçage sont regroupés dans un bloc dédié (carte blanche avec liseré vert, titre centré
+"Veuillez sélectionner votre mode !" / "Please select your mode!", deux grands boutons ; mode actif
+en bleu marine avec filet doré). Aucun changement de logique.
+
 **v144.28 (matière et nuance obligatoires, sans valeur par défaut)** : la section "Matière" n'a plus
 de catégorie ni de nuance présélectionnées (avant : première catégorie et première nuance choisies
 automatiquement). Le choix de la nuance n'est possible qu'après celui de la matière, et changer de
