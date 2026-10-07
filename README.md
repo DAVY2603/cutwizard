@@ -1,5 +1,8 @@
 # KENI CutWizard — déploiement web
 
+**v144.32 (libellés de la section Lame)** : "Longueur de lame (mm)" devient "Longueur lame (mm)" et
+"Dimensions de lame (catalogue KENI)" devient "Dimensions lame (mm)" (EN : "Blade dimensions (mm)").
+
 **v144.31 (texte d'introduction du mode Sciage)** : sous les boutons Sciage / Perçage, le mode Sciage
 affiche désormais, comme Perçage, une phrase d'introduction : "Calculez la vitesse de coupe et
 d'avance pour vos applications de sciage." (FR) / "Calculate the cutting speed and feed rate for
