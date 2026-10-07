@@ -1,5 +1,11 @@
 # KENI CutWizard — déploiement web
 
+**v144.33 (mise en page des blocs "Produit de perçage" et "Qualité de l'outil")** : les pastilles
+(chips) sont remplacées par des tuiles en grille à 2 colonnes (hauteur homogène, une tuile impaire
+occupe toute la largeur) avec un rond de sélection ; l'option active passe en bleu marine avec filet
+doré et coche verte — même langage visuel que le bloc de choix du mode. Aucun changement de logique.
+Vérifié en largeur mobile (500 px) et desktop (1100 px).
+
 **v144.32 (libellés de la section Lame)** : "Longueur de lame (mm)" devient "Longueur lame (mm)" et
 "Dimensions de lame (catalogue KENI)" devient "Dimensions lame (mm)" (EN : "Blade dimensions (mm)").
 
