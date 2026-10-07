@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.30 (texte d'introduction du mode Perçage)** : "Calculez la vitesse de rotation et l'avance
+recommandées pour vos outils de perçage." (FR) / "Calculate the recommended spindle speed and feed
+rate for your drilling tools." (EN) — remplace l'ancienne phrase citant perçage, sciage-cloche et
+carottage annulaire.
+
 **v144.29 (bloc "Veuillez sélectionner votre mode !")** : sous le texte d'introduction, les boutons
 Sciage / Perçage sont regroupés dans un bloc dédié (carte blanche avec liseré vert, titre centré
 "Veuillez sélectionner votre mode !" / "Please select your mode!", deux grands boutons ; mode actif
