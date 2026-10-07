@@ -1,5 +1,12 @@
 # KENI CutWizard — déploiement web
 
+**v144.34 (mise en forme en tuiles étendue à tous les choix)** : la présentation en tuiles introduite
+en v144.33 pour "Produit de perçage" et "Qualité de l'outil" s'applique désormais à tous les autres
+sélecteurs à choix : état de la pièce, forme (Ronde / Carré-Rectangle / Tube / Profilés), type de
+tube, type de profilé, orientation de coupe, type de coupe, et matériau de la scie cloche.
+Implémentation : `Segmented` et `ChipGroup` délèguent à `TileGroup` (aucun changement de logique).
+Le bloc de choix du mode Sciage / Perçage garde ses grands boutons dédiés.
+
 **v144.33 (mise en page des blocs "Produit de perçage" et "Qualité de l'outil")** : les pastilles
 (chips) sont remplacées par des tuiles en grille à 2 colonnes (hauteur homogène, une tuile impaire
 occupe toute la largeur) avec un rond de sélection ; l'option active passe en bleu marine avec filet
