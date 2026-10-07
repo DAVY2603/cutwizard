@@ -1,5 +1,11 @@
 # KENI CutWizard — déploiement web
 
+**v144.28 (matière et nuance obligatoires, sans valeur par défaut)** : la section "Matière" n'a plus
+de catégorie ni de nuance présélectionnées (avant : première catégorie et première nuance choisies
+automatiquement). Le choix de la nuance n'est possible qu'après celui de la matière, et changer de
+matière efface la nuance. Les résultats exigent désormais : matière + nuance, pièce + toutes ses
+dimensions, dimensions et longueur de lame. Messages d'aide rouges FR/EN.
+
 **v144.27 (lame utilisée : dimensions et longueur obligatoires, sans valeur par défaut)** : la
 section "Lame utilisée" n'a plus de dimension de lame présélectionnée (avant : 34 x 1,1 mm). Les
 résultats ne s'affichent que si les dimensions de lame ET la longueur de lame (> 0) sont renseignées,
