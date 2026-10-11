@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.38 (Matière + groupe ISO)** : « Matière à usiner » devient « Matière » ; dans les résultats, un badge
+coloré indique le groupe ISO à côté de la matière (P aciers, M inox, K fontes, N non-ferreux, S titane,
+H aciers trempés/Hardox ; X = hors ISO 513 : plastiques, bois, minéraux, verre, composites). Groupe déduit
+du libellé de la matière par `isoOfMaterial` (les classeurs Excel ne contiennent pas de code ISO).
+
 **v144.37 (bloc Résultats)** : nouvelle mise en page des résultats Perçage / Tronçonnage / Ébavurage :
 en-tête produit + qualité (filet doré), pastilles Ø et matière, grandes tuiles Vc (bleu marine), n et Vf,
 cartes Avance / Type d'avance / Lubrification / Remarque (filet vert, doré pour la remarque), bouton
