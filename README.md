@@ -1,5 +1,15 @@
 # KENI CutWizard — déploiement web
 
+**v144.35 (modes Perçage, Tronçonnage, Ébavurage refaits depuis les fichiers Excel)** : le mode Sciage
+est inchangé. Toutes les anciennes données et la logique de Perçage ont été supprimées, puis trois modes
+ont été reconstruits à partir des classeurs `Conditions_de_coupe_Perçage/Tronçonnage/Ebavurage.xlsx`
+(données générées par script, une entrée par famille de produits). Parcours : Produit → Qualité →
+Matière → Diamètre (saisie libre, contrôlée dans la plage de la famille) ; aucun défaut, résultats
+masqués tant que tout n'est pas renseigné. Résultats : Vc (m/min), n = Vc × 1000 / (π × Ø), puis Avance,
+Type d'avance, Lubrification, Remarque et lien « Découvrez nos produits » (URL de l'onglet Familles
+Produits). Fraises scies : nombre de dents facultatif pour Vf = fz × dents × n. Le sélecteur de mode
+passe à 4 boutons. Les libellés de données (matières, remarques…) restent en français dans la version EN.
+
 **v144.34 (mise en forme en tuiles étendue à tous les choix)** : la présentation en tuiles introduite
 en v144.33 pour "Produit de perçage" et "Qualité de l'outil" s'applique désormais à tous les autres
 sélecteurs à choix : état de la pièce, forme (Ronde / Carré-Rectangle / Tube / Profilés), type de
