@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.44 (référencement)** : nouveau titre « CutWizard KENI — Calculateur de vitesse de coupe et d'avance pour le
+Sciage, Perçage, Tronçonnage et Ébavurage » et nouvelle description (sciage à ruban, perçage, tronçonnage,
+ébavurage). Adaptés en cohérence : balises Open Graph et Twitter, description JSON-LD (schema.org), mots-clés,
+texte `<noscript>`, `manifest.json`, date du `sitemap.xml` ; mêmes mises à jour en anglais dans `en/index.html`.
+
 **v144.43 (Fraises Trépans + traduction anglaise complète)** : le mode Perçage gagne le produit « Fraises Trépans »
 (HSS, HSS revêtue TiAlN, Carbure à dents carbure ; plage de diamètres provisoire 8–100 mm, pas de lien web
 tant que KENI n'a pas fourni les URL). Matières : HSS/TiAlN = aciers, inox, aluminium, cuivre, laiton,

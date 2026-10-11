@@ -1,7 +1,7 @@
 {
   "name": "CutWizard KENI",
   "short_name": "CutWizard",
-  "description": "Calculateur de paramètres de coupe pour le sciage à ruban et le perçage métal.",
+  "description": "Calculateur de vitesse de coupe et d'avance pour le sciage, le perçage, le tronçonnage et l'ébavurage.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f2f3f5",
