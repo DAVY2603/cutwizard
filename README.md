@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.39 (fond clair + logo)** : proposition de fond plus clair. Appli : fond #fafbfc (au lieu de #f2f3f5)
+et filigrane remplacé par le logo complet (cercle + K) très discret. Page web (écrans ≥ 600 px) : le cadre
+extérieur passe du bleu marine à un gris-bleu clair (#e9eff4) avec le logo KENI en couleurs, en bas à
+gauche ; ombre du cadre adoucie. Mobile inchangé hors fond de l'appli.
+
 **v144.38 (Matière + groupe ISO)** : « Matière à usiner » devient « Matière » ; dans les résultats, un badge
 coloré indique le groupe ISO à côté de la matière (P aciers, M inox, K fontes, N non-ferreux, S titane,
 H aciers trempés/Hardox ; X = hors ISO 513 : plastiques, bois, minéraux, verre, composites). Groupe déduit
