@@ -1,5 +1,8 @@
 # KENI CutWizard — déploiement web
 
+**v144.45 (texte d'introduction)** : le texte d'accueil de l'appli cite désormais les 4 modes (« sciage, perçage,
+tronçonnage et ébavurage »), en français et en anglais, en cohérence avec le nouveau titre/description SEO.
+
 **v144.44 (référencement)** : nouveau titre « CutWizard KENI — Calculateur de vitesse de coupe et d'avance pour le
 Sciage, Perçage, Tronçonnage et Ébavurage » et nouvelle description (sciage à ruban, perçage, tronçonnage,
 ébavurage). Adaptés en cohérence : balises Open Graph et Twitter, description JSON-LD (schema.org), mots-clés,
