@@ -1,5 +1,8 @@
 # KENI CutWizard — déploiement web
 
+**v144.36 (remarques)** : suppression de la phrase « Ligne ajoutée. » dans les données Remarque
+(Ébavurage / Tronçonnage ; les mentions « Limite d'emploi… » et « Limite extrême… » sont conservées).
+
 **v144.35 (modes Perçage, Tronçonnage, Ébavurage refaits depuis les fichiers Excel)** : le mode Sciage
 est inchangé. Toutes les anciennes données et la logique de Perçage ont été supprimées, puis trois modes
 ont été reconstruits à partir des classeurs `Conditions_de_coupe_Perçage/Tronçonnage/Ebavurage.xlsx`
