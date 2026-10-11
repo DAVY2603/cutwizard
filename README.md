@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.40 (pictogrammes)** : les 5 pictos KENI fournis (Sciage, Perçage, Tronçonnage, Ébavurage, Cisaillage)
+sont affichés en colonne dans la marge droite du fond de page (écrans ≥ 900 px), intégrés en SVG inline
+(recolorés bleu marine / vert KENI, car les fichiers d'origine sont blancs) avec leur libellé FR/EN.
+Aucun changement dans l'appli (même bundle JS).
+
 **v144.39 (fond clair + logo)** : proposition de fond plus clair. Appli : fond #fafbfc (au lieu de #f2f3f5)
 et filigrane remplacé par le logo complet (cercle + K) très discret. Page web (écrans ≥ 600 px) : le cadre
 extérieur passe du bleu marine à un gris-bleu clair (#e9eff4) avec le logo KENI en couleurs, en bas à
