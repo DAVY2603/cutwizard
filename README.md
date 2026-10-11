@@ -1,5 +1,9 @@
 # KENI CutWizard — déploiement web
 
+**v144.42 (taille des pictos)** : les pictos de la marge droite sont harmonisés dans un cadre commun
+(62 × 52 px, proportions conservées). Le picto Tronçonnage, très large à l'origine (2:1, ~100 px), passe à
+74 × 37 px pour une largeur proche des autres. Aucun changement dans l'appli.
+
 **v144.41 (pictos dynamiques)** : les pictogrammes de la marge droite changent de couleur selon le mode
 sélectionné : gris-bleu clair par défaut, vert KENI agrandi avec libellé en bleu marine pour le mode actif
 (Sciage, Perçage, Tronçonnage, Ébavurage ; Cisaillage n'a pas de mode et reste grisé). L'appli expose le
