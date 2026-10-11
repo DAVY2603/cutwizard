@@ -132,10 +132,10 @@
           box-shadow: 0 0 28px rgba(0,50,84,0.14);
         }
       }
-      /* ≥ 1100 px, hors Sciage : cadre élargi pour afficher deux colonnes (choix à gauche, résultats à droite). */
+      /* ≥ 1100 px : cadre élargi pour afficher deux colonnes (choix à gauche, résultats à droite). */
       @media (min-width: 1100px) {
-        body[data-mode]:not([data-mode="Sciage"]) { --rootw: min(72vw, 1000px); }
-        body[data-mode]:not([data-mode="Sciage"]) { background-size: min(12vw, 380px) auto; }
+        body[data-mode] { --rootw: min(72vw, 1000px); }
+        body[data-mode] { background-size: min(12vw, 380px) auto; }
       }
       /* Pictogrammes métiers KENI (Sciage, Perçage, Tronçonnage, Ébavurage, Cisaillage) : colonne décorative
          dans la marge droite du fond de page, uniquement quand la marge est assez large (≥ 900 px). */
@@ -187,6 +187,6 @@
   <!-- Tells the shared app bundle (same JS as the French page) to start in English, so the
        content matches this page's English title/description from the very first render. -->
   <script>window.__CUTWIZARD_LANG__ = 'en';</script>
-  <script src="../appweb/static/js/web/index-76e87f71f5c6318ef9f1eea357401d43.js" defer></script>
+  <script src="../appweb/static/js/web/index-5caffa351d90e216aa93588171f9422f.js" defer></script>
 </body>
 </html>

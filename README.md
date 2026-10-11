@@ -1,5 +1,7 @@
 # KENI CutWizard — déploiement web
 
+**v144.48 (enchaînement des blocs, phase 2 : Sciage)** : mêmes principes appliqués au Sciage : phrase d'intro dans la carte des modes, Matière/Nuance côte à côte si la largeur le permet, bloc « Informations matière & risque » placé après les résultats sur téléphone, barre fixe Vc / Avance (meilleure lame bimétal) tant que les résultats sont hors écran, et à partir de 1100 px deux colonnes (saisies à gauche, résultats lames à droite, fixes). Cadre élargi à 1100 px et plus pour les quatre modes.
+
 **v144.47 (enchaînement des blocs, phase 1)** : modes Perçage/Tronçonnage/Ébavurage + haut de page commun. Texte d'accueil réduit sur une ligne (« En savoir plus »), bouton de mode compacts avec phrase d'intro intégrée, blocs « Outil » (produit + qualité) et « Matière et diamètre » (côte à côte si la largeur le permet), barre fixe Vc / n / Ø visible sur téléphone/tablette tant que les résultats sont hors écran (clic = retour aux résultats), et à partir de 1100 px : deux colonnes (choix à gauche, résultats fixes à droite) avec cadre élargi (hors Sciage). Sciage inchangé (phase 2).
 
 **v144.46 (libellés des pictos bilingues)** : les textes sous les pictos suivent la langue choisie (drapeau ou page /en/) :
