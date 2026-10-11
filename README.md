@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.37 (bloc Résultats)** : nouvelle mise en page des résultats Perçage / Tronçonnage / Ébavurage :
+en-tête produit + qualité (filet doré), pastilles Ø et matière, grandes tuiles Vc (bleu marine), n et Vf,
+cartes Avance / Type d'avance / Lubrification / Remarque (filet vert, doré pour la remarque), bouton
+« Découvrez nos produits » pleine largeur, avertissement et formule en pied.
+
 **v144.36 (remarques)** : suppression de la phrase « Ligne ajoutée. » dans les données Remarque
 (Ébavurage / Tronçonnage ; les mentions « Limite d'emploi… » et « Limite extrême… » sont conservées).
 
