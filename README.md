@@ -1,5 +1,7 @@
 # KENI CutWizard — déploiement web
 
+**v144.47 (enchaînement des blocs, phase 1)** : modes Perçage/Tronçonnage/Ébavurage + haut de page commun. Texte d'accueil réduit sur une ligne (« En savoir plus »), bouton de mode compacts avec phrase d'intro intégrée, blocs « Outil » (produit + qualité) et « Matière et diamètre » (côte à côte si la largeur le permet), barre fixe Vc / n / Ø visible sur téléphone/tablette tant que les résultats sont hors écran (clic = retour aux résultats), et à partir de 1100 px : deux colonnes (choix à gauche, résultats fixes à droite) avec cadre élargi (hors Sciage). Sciage inchangé (phase 2).
+
 **v144.46 (libellés des pictos bilingues)** : les textes sous les pictos suivent la langue choisie (drapeau ou page /en/) :
 Sciage, Perçage, Tronçonnage, Ébavurage, Cisaillage (remplace « Cisailler ») / Sawing, Drilling, Cutting-Off,
 Deburring, Shearing. L'appli expose la langue via `data-lang` sur `<body>` ; onglet EN « Cutting-Off » harmonisé.
