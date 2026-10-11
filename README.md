@@ -1,5 +1,9 @@
 # KENI CutWizard — déploiement web
 
+**v144.46 (libellés des pictos bilingues)** : les textes sous les pictos suivent la langue choisie (drapeau ou page /en/) :
+Sciage, Perçage, Tronçonnage, Ébavurage, Cisaillage (remplace « Cisailler ») / Sawing, Drilling, Cutting-Off,
+Deburring, Shearing. L'appli expose la langue via `data-lang` sur `<body>` ; onglet EN « Cutting-Off » harmonisé.
+
 **v144.45 (texte d'introduction)** : le texte d'accueil de l'appli cite désormais les 4 modes (« sciage, perçage,
 tronçonnage et ébavurage »), en français et en anglais, en cohérence avec le nouveau titre/description SEO.
 
