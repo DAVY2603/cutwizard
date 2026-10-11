@@ -1,5 +1,13 @@
 # KENI CutWizard — déploiement web
 
+**v144.43 (Fraises Trépans + traduction anglaise complète)** : le mode Perçage gagne le produit « Fraises Trépans »
+(HSS, HSS revêtue TiAlN, Carbure à dents carbure ; plage de diamètres provisoire 8–100 mm, pas de lien web
+tant que KENI n'a pas fourni les URL). Matières : HSS/TiAlN = aciers, inox, aluminium, cuivre, laiton,
+thermoplastiques (fonte retirée) ; Carbure = idem sans les Hardox. Valeurs reprises des fraises à carotter
+et, pour cuivre/laiton/plastiques, des scies cloches (à valider par KENI). Version anglaise : tous les libellés
+des données (produits, qualités, matières, avances, lubrifications, remarques) sont désormais traduits
+(dictionnaire `CONDITIONS_EN`), décimales en point.
+
 **v144.42 (taille des pictos)** : les pictos de la marge droite sont harmonisés dans un cadre commun
 (62 × 52 px, proportions conservées). Le picto Tronçonnage, très large à l'origine (2:1, ~100 px), passe à
 74 × 37 px pour une largeur proche des autres. Aucun changement dans l'appli.
