@@ -1,5 +1,10 @@
 # KENI CutWizard — déploiement web
 
+**v144.41 (pictos dynamiques)** : les pictogrammes de la marge droite changent de couleur selon le mode
+sélectionné : gris-bleu clair par défaut, vert KENI agrandi avec libellé en bleu marine pour le mode actif
+(Sciage, Perçage, Tronçonnage, Ébavurage ; Cisaillage n'a pas de mode et reste grisé). L'appli expose le
+mode via `data-mode` sur `<body>` (web uniquement) ; le CSS de `index.html` fait le reste.
+
 **v144.40 (pictogrammes)** : les 5 pictos KENI fournis (Sciage, Perçage, Tronçonnage, Ébavurage, Cisaillage)
 sont affichés en colonne dans la marge droite du fond de page (écrans ≥ 900 px), intégrés en SVG inline
 (recolorés bleu marine / vert KENI, car les fichiers d'origine sont blancs) avec leur libellé FR/EN.
